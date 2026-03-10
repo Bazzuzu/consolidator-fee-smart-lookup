@@ -4,33 +4,33 @@ import { ChevronDown, Search, RotateCcw, ArrowUpDown, ArrowUp, ArrowDown, Refres
 // --- Mock Data ---
 const mockData = [
   // Voeja
-  { id: 1, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AA"], cabin: "Economy", direction: "Westbound", consolidatorFee: 0, markup: 10, conditions: "L0WJ AAA access" },
-  { id: 2, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AA"], cabin: "Business", direction: "Eastbound", consolidatorFee: 75, markup: 25, conditions: "EMT01 / ENT15" },
-  { id: 8, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["DL"], cabin: "First", direction: "Westbound", consolidatorFee: 120, markup: 40, conditions: "VIP Client Access" },
-  { id: 12, consolidator: "Voeja", pcc: "U7JK", tripType: "Refund", ageType: "Adult", fareType: "Corporate", airlines: ["IB"], cabin: "Economy", direction: "Westbound", consolidatorFee: 30, markup: 15, conditions: "Iberia Business Plus" },
-  { id: 16, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Infant", fareType: "Tour", airlines: ["JJ"], cabin: "Economy", direction: "Eastbound", consolidatorFee: 0, markup: 5, conditions: "South America Special" },
-  { id: 20, consolidator: "Voeja", pcc: "U7JK", tripType: "Change", ageType: "Adult", fareType: "Cruise", airlines: ["TP"], cabin: "Business", direction: "All", consolidatorFee: 110, markup: 30, conditions: "TAP Portugal Feed" },
+  { id: 1, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AA"], cabin: "Economy", flightType: "Round Trip", direction: "Westbound", consolidatorFee: 0, markup: 10, conditions: "L0WJ AAA access" },
+  { id: 2, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AA"], cabin: "Business", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 75, markup: 25, conditions: "EMT01 / ENT15" },
+  { id: 8, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["DL"], cabin: "First", flightType: "One Way", direction: "Westbound", consolidatorFee: 120, markup: 40, conditions: "VIP Client Access" },
+  { id: 12, consolidator: "Voeja", pcc: "U7JK", tripType: "Refund", ageType: "Adult", fareType: "Corporate", airlines: ["IB"], cabin: "Economy", flightType: "Round Trip", direction: "Westbound", consolidatorFee: 30, markup: 15, conditions: "Iberia Business Plus" },
+  { id: 16, consolidator: "Voeja", pcc: "U7JK", tripType: "Regular", ageType: "Infant", fareType: "Tour", airlines: ["JJ"], cabin: "Economy", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 0, markup: 5, conditions: "South America Special" },
+  { id: 20, consolidator: "Voeja", pcc: "U7JK", tripType: "Change", ageType: "Adult", fareType: "Cruise", airlines: ["TP"], cabin: "Business", flightType: "One Way", direction: "All", consolidatorFee: 110, markup: 30, conditions: "TAP Portugal Feed" },
 
   // Travel Edge
-  { id: 3, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Cruise", airlines: ["SQ"], cabin: "Economy", direction: "Westbound", consolidatorFee: 0, markup: 15, conditions: "All airlines" },
-  { id: 4, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Cruise", airlines: ["SQ"], cabin: "Business", direction: "Eastbound", consolidatorFee: 150, markup: 50, conditions: "All airlines" },
-  { id: 9, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Infant", fareType: "Tour", airlines: ["UA"], cabin: "Economy", direction: "All", consolidatorFee: 0, markup: 10, conditions: "Bulk Fare" },
-  { id: 13, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["QF"], cabin: "Premium Economy", direction: "All", consolidatorFee: 85, markup: 20, conditions: "Oneworld Hub" },
-  { id: 17, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["AC"], cabin: "Business", direction: "All", consolidatorFee: 95, markup: 35, conditions: "Maple Leaf Access" },
-  { id: 21, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["QR"], cabin: "Economy", direction: "Westbound", consolidatorFee: 25, markup: 10, conditions: "Qatar Privilege" },
+  { id: 3, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Cruise", airlines: ["SQ"], cabin: "Economy", flightType: "Round Trip", direction: "Westbound", consolidatorFee: 0, markup: 15, conditions: "All airlines" },
+  { id: 4, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Cruise", airlines: ["SQ"], cabin: "Business", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 150, markup: 50, conditions: "All airlines" },
+  { id: 9, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Infant", fareType: "Tour", airlines: ["UA"], cabin: "Economy", flightType: "One Way", direction: "All", consolidatorFee: 0, markup: 10, conditions: "Bulk Fare" },
+  { id: 13, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["QF"], cabin: "Premium Economy", flightType: "Round Trip", direction: "All", consolidatorFee: 85, markup: 20, conditions: "Oneworld Hub" },
+  { id: 17, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["AC"], cabin: "Business", flightType: "Round Trip", direction: "All", consolidatorFee: 95, markup: 35, conditions: "Maple Leaf Access" },
+  { id: 21, consolidator: "Travel Edge", pcc: "5BOL", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["QR"], cabin: "Economy", flightType: "One Way", direction: "Westbound", consolidatorFee: 25, markup: 10, conditions: "Qatar Privilege" },
 
   // Martravel
-  { id: 5, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["LH"], cabin: "Premium Economy", direction: "Westbound", consolidatorFee: 200, markup: 50, conditions: "L0WJ AAA access" },
-  { id: 6, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["LH"], cabin: "Business", direction: "Eastbound", consolidatorFee: 600, markup: 100, conditions: "L0WJ AAA access" },
-  { id: 10, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AF"], cabin: "Business", direction: "Eastbound", consolidatorFee: 45, markup: 15, conditions: "SkyTeam Portal" },
-  { id: 14, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["CX"], cabin: "First", direction: "All", consolidatorFee: 250, markup: 75, conditions: "Elite Tier Only" },
-  { id: 18, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["VS"], cabin: "Premium Economy", direction: "Westbound", consolidatorFee: 40, markup: 20, conditions: "Virgin Atlantic Portal" },
+  { id: 5, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["LH"], cabin: "Premium Economy", flightType: "One Way", direction: "Westbound", consolidatorFee: 200, markup: 50, conditions: "L0WJ AAA access" },
+  { id: 6, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Corporate", airlines: ["LH"], cabin: "Business", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 600, markup: 100, conditions: "L0WJ AAA access" },
+  { id: 10, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["AF"], cabin: "Business", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 45, markup: 15, conditions: "SkyTeam Portal" },
+  { id: 14, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["CX"], cabin: "First", flightType: "One Way", direction: "All", consolidatorFee: 250, markup: 75, conditions: "Elite Tier Only" },
+  { id: 18, consolidator: "Martravel", pcc: "H05H", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["VS"], cabin: "Premium Economy", flightType: "Round Trip", direction: "Westbound", consolidatorFee: 40, markup: 20, conditions: "Virgin Atlantic Portal" },
 
   // Norad
-  { id: 7, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["BA"], cabin: "Economy", direction: "Eastbound", consolidatorFee: 10, markup: 5, conditions: "Standard Access" },
-  { id: 11, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["EK"], cabin: "Economy", direction: "Eastbound", consolidatorFee: 0, markup: 20, conditions: "GDS Direct" },
-  { id: 15, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["LX"], cabin: "Business", direction: "Westbound", consolidatorFee: 55, markup: 15, conditions: "Swiss Saver" },
-  { id: 19, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Infant", fareType: "Private", airlines: ["AY"], cabin: "Economy", direction: "Eastbound", consolidatorFee: 15, markup: 5, conditions: "Helsinki Stopover" }
+  { id: 7, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["BA"], cabin: "Economy", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 10, markup: 5, conditions: "Standard Access" },
+  { id: 11, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Private", airlines: ["EK"], cabin: "Economy", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 0, markup: 20, conditions: "GDS Direct" },
+  { id: 15, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Adult", fareType: "Published", airlines: ["LX"], cabin: "Business", flightType: "One Way", direction: "Westbound", consolidatorFee: 55, markup: 15, conditions: "Swiss Saver" },
+  { id: 19, consolidator: "Norad", pcc: "36L9", tripType: "Regular", ageType: "Infant", fareType: "Private", airlines: ["AY"], cabin: "Economy", flightType: "Round Trip", direction: "Eastbound", consolidatorFee: 15, markup: 5, conditions: "Helsinki Stopover" }
 ];
 
 const mockActivityLog = [
@@ -95,15 +95,18 @@ const mockActivityLog = [
 // --- UI Components ---
 
 const RibbonSelect = ({ value, options, onChange, prefix }: { value: string, options: string[], onChange: (val: string) => void, prefix: string }) => (
-  <div className="relative h-9 w-full">
+  <div className="relative h-9 w-full flex items-center cursor-pointer" onClick={(e) => { const sel = (e.currentTarget.querySelector('select') as HTMLSelectElement); sel?.focus(); }}>
     <select
-      className="w-full h-full appearance-none bg-[var(--bg-surface)] border border-[var(--border-primary)] text-[var(--text-primary)] text-sm rounded-md pl-3 pr-8 focus:outline-none focus:ring-1 focus:ring-[var(--brand-primary)] focus:border-transparent transition-shadow shadow-sm cursor-pointer"
+      className="absolute inset-0 w-full h-full appearance-none bg-transparent border-none opacity-0 cursor-pointer focus:outline-none focus:ring-0 z-10"
       value={value}
       onChange={(e) => onChange(e.target.value)}
     >
       {options.map(opt => <option key={opt} value={opt} className="bg-[var(--bg-surface)]">{prefix}: {opt}</option>)}
     </select>
-    <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)] pointer-events-none" />
+    <span className="pl-3 pr-7 text-sm pointer-events-none select-none truncate">
+      <span className="text-[var(--text-secondary)] tracking-tight">{prefix}: </span><span className="text-[var(--text-primary)]">{value}</span>
+    </span>
+    <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)] pointer-events-none opacity-50" />
   </div>
 );
 
@@ -295,18 +298,18 @@ const RibbonMultiSelect = ({ options, selected, onChange, prefix }: { options: s
     }
   };
 
-  let displayText = `${prefix}: All`;
-  if (selected.length === 1) displayText = `${prefix}: ${selected[0]}`;
-  else if (selected.length > 1) displayText = `${prefix}: ${selected.length} selected`;
+  let valueText = selected.length === 0 ? 'All' : selected.length === 1 ? selected[0] : `${selected.length} selected`;
 
   return (
     <div className="relative h-9 w-full" ref={dropdownRef}>
       <div
-        className="w-full h-full bg-[var(--bg-surface)] border border-[var(--border-primary)] text-[var(--text-primary)] text-sm rounded-md px-3 flex items-center justify-between cursor-pointer focus-within:ring-1 focus-within:ring-indigo-500 focus-within:border-transparent transition-shadow shadow-sm"
+        className="w-full h-full bg-transparent border-none text-sm rounded-md px-3 flex items-center justify-between cursor-pointer focus-within:ring-0 transition-shadow"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="truncate pr-2">{displayText}</span>
-        <ChevronDown className={`w-4 h-4 text-[var(--text-muted)] transition-transform shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="truncate pr-2">
+          <span className="text-[var(--text-secondary)] tracking-tight">{prefix}: </span><span className="text-[var(--text-primary)]">{valueText}</span>
+        </span>
+        <ChevronDown className={`w-4 h-4 text-[var(--text-muted)] transition-transform shrink-0 opacity-50 ${isOpen ? 'rotate-180' : ''}`} />
       </div>
 
       {isOpen && (
@@ -360,7 +363,9 @@ export default function App() {
   const [selectedFareTypes, setSelectedFareTypes] = useState<string[]>(['Published']);
   const [selectedCabins, setSelectedCabins] = useState<string[]>([]);
   const [selectedTripTypes, setSelectedTripTypes] = useState<string[]>([]);
-  const [selectedDirection, setSelectedDirection] = useState('All');
+  const [selectedFlightType, setSelectedFlightType] = useState('All');
+  const [showWestbound, setShowWestbound] = useState(true);
+  const [showEastbound, setShowEastbound] = useState(true);
   const [globalSearch, setGlobalSearch] = useState('');
   const [sortColumn, setSortColumn] = useState<'consolidatorFee' | 'markup' | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -389,7 +394,9 @@ export default function App() {
     setSelectedFareTypes(['Published']);
     setSelectedCabins([]);
     setSelectedTripTypes([]);
-    setSelectedDirection('All');
+    setSelectedFlightType('All');
+    setShowWestbound(true);
+    setShowEastbound(true);
     setGlobalSearch('');
     setShowAdult(true);
     setShowInfant(true);
@@ -488,7 +495,8 @@ export default function App() {
         consolidatorFee: Number(ruleForm.consolidatorFee) || 0,
         markup: Number(ruleForm.markup) || 0,
         ageType: ruleForm.ageType || 'Adult',
-        tripType: ruleForm.tripType || 'Regular'
+        tripType: ruleForm.tripType || 'Regular',
+        flightType: ruleForm.flightType || 'Round Trip'
       };
 
       setData([...data, newRule]);
@@ -498,6 +506,7 @@ export default function App() {
           consolidator: ruleForm.consolidator,
           pcc: ruleForm.pcc,
           tripType: ruleForm.tripType,
+          flightType: ruleForm.flightType,
           fareType: ruleForm.fareType,
           ageType: ruleForm.ageType === 'Adult' ? 'Infant' : 'Adult', // Proactive help for rapid entry
         });
@@ -550,8 +559,13 @@ export default function App() {
       if (!showAdult && row.ageType === 'Adult') return false;
       if (!showInfant && row.ageType === 'Infant') return false;
 
+      // Flight Type filter
+      if (selectedFlightType !== 'All' && row.flightType !== selectedFlightType) return false;
+
       // Direction filter
-      if (selectedDirection !== 'All' && row.direction !== selectedDirection) return false;
+      if (!showWestbound && row.direction === 'Westbound') return false;
+      if (!showEastbound && row.direction === 'Eastbound') return false;
+      if (row.direction === 'All' && !showWestbound && !showEastbound) return false;
 
       return true;
     });
@@ -568,7 +582,7 @@ export default function App() {
     }
 
     return filtered;
-  }, [data, airlineInput, selectedFareTypes, selectedCabins, selectedTripTypes, selectedDirection, globalSearch, sortColumn, sortDirection, showAdult, showInfant]);
+  }, [data, airlineInput, selectedFareTypes, selectedCabins, selectedTripTypes, selectedFlightType, showWestbound, showEastbound, globalSearch, sortColumn, sortDirection, showAdult, showInfant]);
 
   const formatFee = (fee: number) => {
     if (fee === 0) return '$0.00';
@@ -637,67 +651,87 @@ export default function App() {
 
         {/* Section A: Control Panel (High-Density Command Ribbon) */}
         <section className="shrink-0 z-20">
+          <div className="flex flex-wrap items-center gap-y-2 gap-x-0 w-full border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-lg p-1 shadow-sm">
 
-          {/* Row 1: The Filter Ribbon */}
-          <div className="flex flex-row flex-wrap xl:flex-nowrap items-center gap-3 w-full">
-            <div className="relative w-[240px] h-9 shrink-0">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)]" />
-              <input
-                ref={airlineInputRef}
-                type="text"
-                value={airlineInput}
-                onChange={(e) => setAirlineInput(e.target.value)}
-                placeholder="Airline (e.g. AA, SQ)..."
-                className="w-full h-full bg-[var(--bg-surface)] border border-[var(--border-primary)] text-[var(--text-primary)] text-sm rounded-md pl-9 pr-8 focus:outline-none focus:ring-1 focus:ring-[var(--brand-primary)] focus:border-transparent transition-shadow shadow-sm"
-              />
-              {airlineInput && (
-                <button
-                  onClick={() => { setAirlineInput(''); airlineInputRef.current?.focus(); }}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-primary)] focus:outline-none"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
+            {/* Group 1: Search - Flexible */}
+            <div className="flex-1 min-w-[200px] h-9 flex items-center border-r border-[var(--border-primary)] pr-2 mr-2">
+              <div className="relative w-full h-9 flex items-center">
+                <Search className="absolute left-3 w-4 h-4 text-[var(--text-muted)]" />
+                <input
+                  ref={airlineInputRef}
+                  type="text"
+                  value={airlineInput}
+                  onChange={(e) => setAirlineInput(e.target.value)}
+                  placeholder="Search Airline or PCC..."
+                  className="w-full h-full bg-transparent border-none text-[var(--text-primary)] text-sm pl-9 pr-8 focus:outline-none focus:ring-0"
+                />
+                {airlineInput && (
+                  <button
+                    onClick={() => { setAirlineInput(''); airlineInputRef.current?.focus(); }}
+                    className="absolute right-2 text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
             </div>
-            <div className="w-[200px] shrink-0">
-              <RibbonMultiSelect prefix="Fare" selected={selectedFareTypes} onChange={setSelectedFareTypes} options={["Published", "Cruise", "Corporate", "Private", "Tour"]} />
+
+            {/* Group 2: Dropdowns - Auto Width Multi-Selects */}
+            <div className="flex items-center gap-1 h-9 border-r border-[var(--border-primary)] pr-2 mr-2 flex-wrap">
+              <div className="w-[140px]">
+                <RibbonMultiSelect prefix="Fare" selected={selectedFareTypes} onChange={setSelectedFareTypes} options={["Published", "Cruise", "Corporate", "Private", "Tour"]} />
+              </div>
+              <div className="w-[140px]">
+                <RibbonMultiSelect prefix="Cabin" selected={selectedCabins} onChange={setSelectedCabins} options={['Economy', 'Premium Economy', 'Business', 'First']} />
+              </div>
+              <div className="w-[140px]">
+                <RibbonMultiSelect prefix="Trip" selected={selectedTripTypes} onChange={setSelectedTripTypes} options={['Regular', 'Refund', 'Change']} />
+              </div>
+              <div className="w-[140px]">
+                <RibbonSelect prefix="Flight" value={selectedFlightType} onChange={setSelectedFlightType} options={['All', 'One Way', 'Round Trip']} />
+              </div>
             </div>
-            <div className="w-[160px] shrink-0">
-              <RibbonMultiSelect prefix="Cabin" selected={selectedCabins} onChange={setSelectedCabins} options={['Economy', 'Premium Economy', 'Business', 'First']} />
+
+            {/* Group Extension: Direction Checkboxes */}
+            <div className="flex items-center gap-4 h-9 border-r border-[var(--border-primary)] pr-3 mr-3">
+              <Checkbox label="West" checked={showWestbound} onChange={setShowWestbound} />
+              <Checkbox label="East" checked={showEastbound} onChange={setShowEastbound} />
             </div>
-            <div className="w-[180px] shrink-0">
-              <RibbonMultiSelect prefix="Trip" selected={selectedTripTypes} onChange={setSelectedTripTypes} options={['Regular', 'Refund', 'Change']} />
-            </div>
-            <div className="w-[160px] shrink-0">
-              <RibbonSelect prefix="Direction" value={selectedDirection} onChange={setSelectedDirection} options={['All', 'Westbound', 'Eastbound']} />
-            </div>
-            <div className="flex items-center space-x-4 shrink-0 px-2">
+            {/* Group 3: Toggles */}
+            <div className="flex items-center gap-4 h-9 border-r border-[var(--border-primary)] px-3 mr-2">
               <Checkbox label="Adult" checked={showAdult} onChange={setShowAdult} />
               <Checkbox label="Infant" checked={showInfant} onChange={setShowInfant} />
             </div>
-            <div className="w-24 h-9 shrink-0">
-              <Select value="USD" options={['USD', 'EUR', 'GBP', 'CAD']} />
-            </div>
-            <button
-              onClick={handleResetFilters}
-              title="Reset Filters"
-              className="flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--border-secondary)] transition-colors group h-8 w-8 rounded-full shrink-0 ml-auto"
-            >
-              <RotateCcw className="w-4 h-4 group-hover:-rotate-180 transition-transform duration-300" />
-            </button>
-          </div>
 
+            {/* Group 4: Global Actions */}
+            <div className="flex items-center gap-2 pl-1 pr-2">
+              <div className="w-20 h-9 border-r border-[var(--border-primary)] pr-3 mr-1">
+                <select className="w-full h-full bg-transparent border-none text-[var(--text-primary)] text-sm focus:outline-none cursor-pointer">
+                  <option>USD</option>
+                  <option>EUR</option>
+                  <option>GBP</option>
+                </select>
+              </div>
+              <button
+                onClick={handleResetFilters}
+                title="Reset Filters"
+                className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--border-secondary)] rounded-full transition-colors"
+              >
+                <RotateCcw className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </section>
 
         {/* Section B: Data Grid */}
         <div className="flex flex-col flex-1 overflow-hidden">
           <section className="flex-1 rounded-xl border border-[var(--border-primary)] shadow-2xl overflow-hidden flex flex-col bg-[var(--bg-app)]">
-            <div className="overflow-x-auto overflow-y-auto flex-1">
-              <table className="w-full text-sm text-left whitespace-nowrap">
+            <div className="w-full overflow-x-auto overflow-y-auto flex-1 rounded-lg">
+              <table className="w-full text-left border-collapse table-auto min-w-[1000px] text-sm">
                 <thead className="sticky top-0 z-10 bg-[var(--bg-app)]/80 backdrop-blur-md shadow-sm">
                   <tr className="border-b border-[var(--border-primary)]">
                     <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Consolidator</th>
-                    <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">PCC</th>
+                    <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider text-center">PCC</th>
                     <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Trip / Age</th>
                     <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Fare Type</th>
                     <th className="px-6 py-3.5 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Airlines</th>
@@ -755,8 +789,8 @@ export default function App() {
                               </div>
                             </td>
                           )}
-                          <td className="px-6 py-4">
-                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[var(--bg-surface)] border border-[var(--border-primary)] text-[var(--text-secondary)] font-mono">
+                          <td className="px-6 py-4 text-center">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[var(--bg-surface)] border border-[var(--border-primary)] text-[var(--text-secondary)] font-mono mx-auto">
                               {row.pcc}
                             </span>
                           </td>
@@ -764,7 +798,7 @@ export default function App() {
                             <div className="flex flex-col gap-0.5">
                               <span className="text-[var(--text-primary)] font-medium">{row.tripType}</span>
                               <div className="flex items-center gap-2">
-                                <span className={`w-1.5 h-1.5 rounded-full ${row.ageType === 'Adult' ? 'bg-[var(--brand-light)]' : 'bg-[var(--color-error)]'}`}></span>
+                                <span className={`w-1.5 h-1.5 rounded-full ${row.ageType === 'Adult' ? 'bg-[#384FB7]' : 'bg-slate-400'}`}></span>
                                 <span className="text-xs text-[var(--text-secondary)] uppercase tracking-wider font-semibold">{row.ageType}</span>
                               </div>
                             </div>
@@ -775,17 +809,20 @@ export default function App() {
                           <td className="px-6 py-4">
                             <div className="flex flex-wrap gap-1 max-w-[120px]">
                               {row.airlines?.map(a => (
-                                <span key={a} className="inline-flex items-center px-1.5 py-0.5 bg-[var(--brand-primary)]/10 text-[var(--brand-light)] text-[10px] font-bold rounded uppercase tracking-wider">
+                                <span key={a} className="inline-flex items-center px-1.5 py-0.5 bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-zinc-400 text-[10px] font-bold rounded border border-gray-200 dark:border-zinc-700 uppercase tracking-wider">
                                   {a}
                                 </span>
                               ))}
                               {(!row.airlines || row.airlines.length === 0) && <span className="text-[var(--text-muted)] text-[10px] uppercase font-bold tracking-widest">All</span>}
                             </div>
                           </td>
-                          <td className="px-6 py-4">
-                            <div className="flex flex-col gap-0.5">
+                          <td className="px-6 py-4 max-w-[300px]">
+                            <div className="flex items-center flex-wrap gap-x-1">
                               <span className="text-[var(--text-primary)] font-medium">{row.cabin}</span>
-                              <span className="text-xs text-[var(--text-secondary)]">{row.direction}</span>
+                              <span className="text-[var(--text-muted)] opacity-30 mx-1">&bull;</span>
+                              <span className="text-[var(--text-primary)]">{row.flightType}</span>
+                              <span className="text-[var(--text-muted)] opacity-30 mx-1">&bull;</span>
+                              <span className="text-[var(--text-secondary)] whitespace-normal">{row.direction}</span>
                             </div>
                           </td>
                           <td className="px-6 py-4 text-right">
@@ -793,12 +830,12 @@ export default function App() {
                               {formatFee(row.consolidatorFee)}
                             </span>
                           </td>
-                          <td className="px-6 py-4 text-right">
-                            <span className={`font-mono text-sm ${row.markup > 0 ? 'text-[var(--color-success)] font-semibold' : 'text-[var(--text-muted)] opacity-40'}`}>
+                          <td className="px-6 py-4 text-right pr-8">
+                            <span className={`font-mono text-sm ${row.markup > 0 ? 'text-emerald-700 dark:text-emerald-500 font-semibold' : 'text-[var(--text-muted)] opacity-40'}`}>
                               {formatFee(row.markup)}
                             </span>
                           </td>
-                          <td className="px-6 py-4 text-right pr-6">
+                          <td className="px-6 py-4 text-right pr-8">
                             <div className="flex items-center justify-end gap-1 opacity-0 group-hover/row:opacity-100 transition-opacity">
                               <button
                                 onClick={(e) => handleHistory(e, row)}
@@ -980,7 +1017,8 @@ export default function App() {
                         <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">Itinerary</label>
                         <div className="flex gap-4 h-9">
                           <Select placeholder="Cabin" options={['Economy', 'Premium Economy', 'Business', 'First']} value={ruleForm?.cabin || ''} onChange={(val) => setRuleForm({ ...ruleForm, cabin: val })} />
-                          <Select placeholder="Direction" options={['Westbound', 'Eastbound', 'All']} value={ruleForm?.direction || ''} onChange={(val) => setRuleForm({ ...ruleForm, direction: val })} />
+                          <Select placeholder="Flight Type" options={['One Way', 'Round Trip']} value={ruleForm?.flightType || 'Round Trip'} onChange={(val) => setRuleForm({ ...ruleForm, flightType: val })} />
+                          <Select placeholder="Direction" options={['Westbound', 'Eastbound', 'All']} value={ruleForm?.direction || 'All'} onChange={(val) => setRuleForm({ ...ruleForm, direction: val })} />
                         </div>
                       </div>
                     </div>
