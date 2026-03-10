@@ -1,0 +1,47 @@
+/* 
+  SPACING & SIZING SYSTEM
+  
+  Description:
+  Defines the layout grid, spacing scales, and component dimensions.
+  Ensures consistent density and alignment across all sections.
+*/
+
+:root {
+    /* Spacing Scale - description: base units of 4px for margins/paddings */
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-12: 3rem;
+    /* 48px */
+
+    /* Radius - description: controls the curvature of corners */
+    --radius-sm: 0.375rem;
+    /* Fields, chips */
+    --radius-md: 0.5rem;
+    /* Buttons, cards */
+    --radius-lg: 0.75rem;
+    /* Drawers, main sections */
+    --radius-full: 9999px;
+    /* Pill shapes */
+
+    /* Sizing Constraints - description: defines standard widths and heights */
+    --header-height: 4.5rem;
+    --drawer-width: 480px;
+    --max-content-width: 1400px;
+    --icon-sm: 1rem;
+    --icon-md: 1.25rem;
+
+    /* Shadow - description: defines depth and elevation */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}

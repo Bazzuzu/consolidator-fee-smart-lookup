@@ -1,0 +1,51 @@
+/* 
+  COLOR SYSTEM
+  
+  Description:
+  Defines the core palette including brand identity and semantic colors.
+  Supports light and dark modes via CSS variables.
+*/
+
+:root {
+    /* Brand Palette - description: the core identity of the platform (#384FB7) */
+    --brand-primary: #384FB7;
+    --brand-hover: #2E419E;
+    --brand-light: #6366F1;
+
+    /* Semantic Colors - description: indicates status and feedback */
+    --color-success: #10B981;
+    /* Emerald for Markups/Growth */
+    --color-warning: #F59E0B;
+    /* Amber for alerts */
+    --color-error: #EF4444;
+    /* Red for deletions/errors */
+    --color-info: #3B82F6;
+    /* Blue for informational notes */
+
+    /* Light Mode Defaults */
+    --bg-app: #FAFAFA;
+    /* Background of the main app workspace */
+    --bg-surface: #FFFFFF;
+    /* Container background */
+    --text-primary: #09090B;
+    /* Primary headings and important copy */
+    --text-secondary: #52525B;
+    /* Secondary descriptions and labels */
+    --text-muted: #71717A;
+    /* De-emphasized metadata */
+    --border-primary: rgba(0, 0, 0, 0.08);
+    /* Subtle structural lines */
+    --border-secondary: rgba(0, 0, 0, 0.04);
+    /* Faint separators */
+}
+
+/* Dark Mode Overrides */
+.dark {
+    --bg-app: #09090B;
+    --bg-surface: #18181B;
+    --text-primary: #FAFAFA;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+    --border-primary: rgba(255, 255, 255, 0.1);
+    --border-secondary: rgba(255, 255, 255, 0.05);
+}
